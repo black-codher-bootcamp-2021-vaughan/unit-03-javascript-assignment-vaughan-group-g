@@ -1,10 +1,24 @@
-import {dates} from "./data.js"
+
+
+import {dates} from "./data.js";
 console.log(dates);
 
-const listContainer = document.querySelector ("#timeline-item");
 
-const title = document.createElement("h2");
+const timelineItem = document.createElement("div");
+const text = document.createTextNode("This is the timeline-item");
+timelineItem.appendChild(text);
+document.body.appendChild(timelineItem);
+timelineItem.className = "timeline-item";
 
-function fun1 (){
-    var x = document.getElementsByArray("div")
-};
+const timelineItemTitle = document.createElement("h2");
+const title = document.createTextNode("This is the timeline-item-title");
+timelineItemTitle.appendChild(title);
+timelineItem.appendChild(timelineItemTitle);
+timelineItemTitle.className = "timeline-item-Title";
+
+const timelineItemDate = document.createElement("span");
+const date1 = document.createTextNode("This is the timeline-item-date");
+timelineItemDate.appendChild(date1);
+timelineItem.appendChild(timelineItemDate);
+timelineItemDate.className = "timeline-item-Date";
+

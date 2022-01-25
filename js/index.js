@@ -35,51 +35,74 @@ console.log(dates);
 
 
 
-    const buttonOpen = document.createElement("button");
+    const timelineItemMoreInfo = document.createElement("button");
     const text = document.createTextNode("Click to see the full information");
-    buttonOpen.appendChild(text);
-    document.body.appendChild(buttonOpen);
-    buttonOpen.className = "open"; 
-
-
-    const timelineItemMoreInfo = document.createElement("div");
-    timelineItemMoreInfo.className = "timeline-item-more-info";
+    timelineItemMoreInfo.appendChild(text);
     timelineItem.appendChild(timelineItemMoreInfo);
+    document.body.appendChild(timelineItemMoreInfo);
+    timelineItemMoreInfo.className = "timeline-item-more-info"; 
+
+
+    const modalContainer = document.createElement("div");
+    modalContainer.className = "modal-container";
+    timelineItem.appendChild(modalContainer);
 
     const ModalContent = document.createElement("div");
     ModalContent.className = "modal";
-    timelineItemMoreInfo.appendChild(ModalContent);
+    modalContainer.appendChild(ModalContent);
 
-    const modalP = document.createElement("p");
-    const modalIptext = document.createTextNode([date.title , date.date, date.summary]);
-    modalP.appendChild(modalIptext);
-    modalP.className = "text-inside-the-modal";
-    document.body.appendChild(modalP);
-    ModalContent.appendChild(modalP);
+    const modalDate = document.createElement("p");
+    const modalDateText = document.createTextNode(date.date);
+    modalDate.appendChild(modalDateText);
+    modalDate.id = "modal-date";
+    document.body.appendChild(modalDate);
+    ModalContent.appendChild(modalDate);
 
+    const modalTitle = document.createElement("p");
+    const modalTitleText = document.createTextNode(date.title);
+    modalTitle.appendChild(modalTitleText);
+    modalTitle.id = "modal-title";
+    document.body.appendChild(modalTitle);
+    ModalContent.appendChild(modalTitle);
+
+    const modalImage = document.createElement("p");
+    const modalImageText = document.createTextNode(date.image);
+    modalImage.appendChild(modalImageText);
+    modalImage.id = "modal-image";
+    document.body.appendChild(modalImage);
+    ModalContent.appendChild(modalImage);
+
+    const modalFullDescription = document.createElement("p");
+    const modalFullDescriptionText = document.createTextNode(date.fullDescription);
+    modalFullDescription.appendChild(modalFullDescriptionText);
+    modalFullDescription.id = "modal-full-description";
+    document.body.appendChild(modalFullDescription);
+    ModalContent.appendChild(modalFullDescription);
+
+   
     
-    const buttonClose = document.createElement("button");
+    const modalCloseButton = document.createElement("button");
     const closeMeText = document.createTextNode("Close ");
-    buttonClose.appendChild(closeMeText);
-    document.body.appendChild(buttonClose);
-    buttonClose.className = "close"; 
-    ModalContent.appendChild(buttonClose);
+    modalCloseButton.appendChild(closeMeText);
+    document.body.appendChild(modalCloseButton);
+    modalCloseButton.id = "modal-close-button"; 
+    ModalContent.appendChild(modalCloseButton);
     
     
 
 
 
-    buttonOpen.onclick = function() {
-        timelineItemMoreInfo.style.display = "block";
+    timelineItemMoreInfo.onclick = function() {
+        modalContainer.style.display = "block";
      }
 
-     buttonClose.onclick = function() {
-        timelineItemMoreInfo.style.display = "none";
+     modalCloseButton.onclick = function() {
+        modalContainer.style.display = "none";
       }
 
       window.onclick = function(event) {
-        if (event.target == timelineItemMoreInfo) {
-          timelineItemMoreInfo.style.display = "none"
+        if (event.target == modalContainer) {
+          modalContainer.style.display = "none"
         }
       }
   

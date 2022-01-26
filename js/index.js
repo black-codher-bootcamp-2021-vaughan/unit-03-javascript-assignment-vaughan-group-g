@@ -8,8 +8,8 @@ console.log(dates);
 
  dates.map((date) => {
     const timelineItem = document.createElement("div");
-    document.body.appendChild(timelineItem);
     timelineItem.className = "timeline-item";
+    document.body.appendChild(timelineItem);
     const timelineItemTitle = document.createElement("h2");
     const title = document.createTextNode(date.title);
     timelineItemTitle.appendChild(title);

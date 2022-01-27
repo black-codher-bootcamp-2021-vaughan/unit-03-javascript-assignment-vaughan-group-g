@@ -65,8 +65,10 @@ console.log(dates);
     document.body.appendChild(modalTitle);
     ModalContent.appendChild(modalTitle);
 
-    const modalImage = document.createElement("p");
+    const modalImage = document.createElement("img");
     const modalImageText = document.createTextNode(date.image);
+    modalImage.setAttribute("src", date.image);
+    modalImage.setAttribute("width", "304");
     modalImage.appendChild(modalImageText);
     modalImage.id = "modal-image";
     document.body.appendChild(modalImage);

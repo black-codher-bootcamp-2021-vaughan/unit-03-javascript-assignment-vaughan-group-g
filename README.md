@@ -1,4 +1,4 @@
-[TODO: Replace with your Netflify status badge]
+www.maymesbakerytimeline.com
 
 # JavaScript Assessment
 

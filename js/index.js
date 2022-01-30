@@ -10,19 +10,18 @@ console.log(dates);
     const timeline = document.getElementsByClassName("timeline");
     const timelineItem = document.createElement("div");
     timelineItem.className = "timeline-item";
-    // timeline.appendChild(timelineItem);
     document.body.appendChild(timelineItem);
     const timelineItemTitle = document.createElement("h2");
     const title = document.createTextNode(date.title);
     timelineItemTitle.appendChild(title);
     timelineItem.appendChild(timelineItemTitle);
-    timelineItemTitle.className = "timeline-item-Title";
+    timelineItemTitle.className = "timeline-item-title";
     
     const timelineItemDate = document.createElement("span");
     const date1 = document.createTextNode(date.date);
     timelineItemDate.appendChild(date1);
     timelineItem.appendChild(timelineItemDate);
-    timelineItemDate.className = "timeline-item-Date"; 
+    timelineItemDate.className = "timeline-item-date"; 
     
 
 
@@ -32,7 +31,7 @@ console.log(dates);
     const summary1 = document.createTextNode(date.summary);
     timelineItemSummary.appendChild(summary1);
     timelineItem.appendChild(timelineItemSummary);
-    timelineItemSummary.className = "timeline-item-Summary"; 
+    timelineItemSummary.className = "timeline-item-summary"; 
     document.body.appendChild(timelineItem);
 
 
@@ -46,7 +45,7 @@ console.log(dates);
 
 
     const modalContainer = document.createElement("div");
-    modalContainer.className = "modal-container";
+    modalContainer.id = "modal-container";
     timelineItem.appendChild(modalContainer);
 
     const modalContent = document.createElement("div");

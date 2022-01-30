@@ -45,7 +45,7 @@ console.log(dates);
 
 
     const modalContainer = document.createElement("div");
-    modalContainer.className = "modal-container";
+    modalContainer.id = "modal-container";
     timelineItem.appendChild(modalContainer);
 
     const modalContent = document.createElement("div");

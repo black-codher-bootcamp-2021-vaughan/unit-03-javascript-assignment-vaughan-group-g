@@ -7,8 +7,10 @@ import {dates} from "./data.js";
 console.log(dates);
 
  dates.map((date) => {
+    const timeline = document.getElementsByClassName("timeline");
     const timelineItem = document.createElement("div");
     timelineItem.className = "timeline-item";
+    // timeline.appendChild(timelineItem);
     document.body.appendChild(timelineItem);
     const timelineItemTitle = document.createElement("h2");
     const title = document.createTextNode(date.title);

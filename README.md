@@ -1,4 +1,4 @@
-[https://maymesbakerytimeline.netlify.app]
+[![Netlify Status](https://api.netlify.com/api/v1/badges/76446559-f989-4afa-b507-e30d2df3648c/deploy-status)](https://app.netlify.com/sites/maymesbakerystimeline/deploys)
 
 # JavaScript Assessment
 

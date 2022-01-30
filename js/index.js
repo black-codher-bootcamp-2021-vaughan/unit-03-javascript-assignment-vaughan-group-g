@@ -51,7 +51,7 @@ console.log(dates);
     const modalContent = document.createElement("div");
 
 
-    modalContent.className = "modal";
+    modalContent.className = "modal-content";
     modalContainer.appendChild(modalContent);
 
     const modalDate = document.createElement("p");

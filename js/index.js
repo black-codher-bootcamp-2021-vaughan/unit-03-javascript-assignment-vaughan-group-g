@@ -49,23 +49,25 @@ console.log(dates);
     modalContainer.className = "modal-container";
     timelineItem.appendChild(modalContainer);
 
-    const ModalContent = document.createElement("div");
-    ModalContent.className = "modal";
-    modalContainer.appendChild(ModalContent);
+    const modalContent = document.createElement("div");
+
+
+    modalContent.className = "modal";
+    modalContainer.appendChild(modalContent);
 
     const modalDate = document.createElement("p");
     const modalDateText = document.createTextNode(date.date);
     modalDate.appendChild(modalDateText);
     modalDate.id = "modal-date";
     document.body.appendChild(modalDate);
-    ModalContent.appendChild(modalDate);
+    modalContent.appendChild(modalDate);
 
     const modalTitle = document.createElement("p");
     const modalTitleText = document.createTextNode(date.title);
     modalTitle.appendChild(modalTitleText);
     modalTitle.id = "modal-title";
     document.body.appendChild(modalTitle);
-    ModalContent.appendChild(modalTitle);
+    modalContent.appendChild(modalTitle);
 
     const modalImage = document.createElement("img");
     const modalImageText = document.createTextNode(date.image);
@@ -74,14 +76,14 @@ console.log(dates);
     modalImage.appendChild(modalImageText);
     modalImage.id = "modal-image";
     document.body.appendChild(modalImage);
-    ModalContent.appendChild(modalImage);
+    modalContent.appendChild(modalImage);
 
     const modalFullDescription = document.createElement("p");
     const modalFullDescriptionText = document.createTextNode(date.fullDescription);
     modalFullDescription.appendChild(modalFullDescriptionText);
     modalFullDescription.id = "modal-full-description";
     document.body.appendChild(modalFullDescription);
-    ModalContent.appendChild(modalFullDescription);
+    modalContent.appendChild(modalFullDescription);
 
    
     
@@ -90,7 +92,7 @@ console.log(dates);
     modalCloseButton.appendChild(closeMeText);
     document.body.appendChild(modalCloseButton);
     modalCloseButton.id = "modal-close-button"; 
-    ModalContent.appendChild(modalCloseButton);
+    modalContent.appendChild(modalCloseButton);
     
     
 
